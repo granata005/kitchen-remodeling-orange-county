@@ -846,6 +846,7 @@ section {
 .testimonials-carousel {
     position: relative;
     margin: 3rem 0;
+    overflow: hidden;
 }
 
 .carousel-nav {
@@ -879,7 +880,6 @@ section {
 }
 
 .testimonials-track {
-    overflow: hidden;
     display: flex;
     transition: transform 0.5s ease;
 }
