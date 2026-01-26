@@ -295,17 +295,21 @@
                     submitBtn.innerHTML = 'Sending...';
                     submitBtn.disabled = true;
                     
-                    // Simulate form submission (replace with actual endpoint)
+                    // Submit to Web3Forms
                     fetch(form.action, {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
                     })
-                    .then(response => {
-                        if (response.ok) {
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.success) {
                             this.showSuccessMessage(form);
                             form.reset();
                         } else {
-                            throw new Error('Submission failed');
+                            throw new Error(result.message || 'Submission failed');
                         }
                     })
                     .catch(error => {
