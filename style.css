@@ -871,11 +871,11 @@ section {
 }
 
 .carousel-nav.prev {
-    left: -20px;
+    left: 10px;
 }
 
 .carousel-nav.next {
-    right: -20px;
+    right: 10px;
 }
 
 .testimonials-track {
