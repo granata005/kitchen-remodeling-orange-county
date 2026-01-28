@@ -14,7 +14,7 @@
         init() {
             this.setupMobileMenu();
             this.setupThemeToggle();
-            this.setupSmoothScroll();
+            // this.setupSmoothScroll(); // Removed to use native CSS scrolling
             this.setupPortfolioFilters();
             this.setupTestimonialsCarousel();
             this.setupFormValidation();
@@ -87,32 +87,11 @@
         },
 
         // ===========================================
-        // SMOOTH SCROLL
+        // SMOOTH SCROLL (REMOVED - handled by CSS)
         // ===========================================
 
-        setupSmoothScroll() {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
+        // setupSmoothScroll() function removed
 
-                    // Ignore empty hash or just #
-                    if (!href || href === '#') return;
-
-                    const target = document.querySelector(href);
-                    if (!target) return;
-
-                    e.preventDefault();
-
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        },
 
         // ===========================================
         // PORTFOLIO FILTERS
