@@ -1349,6 +1349,25 @@ footer {
     text-align: center;
 }
 
+.cert-badge-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cert-badge-link:hover {
+    color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+.cert-badge-link svg {
+    transition: all 0.3s ease;
+}
+
+.cert-badge-link:hover svg {
+    stroke: var(--accent-gold);
+}
+
 .footer-column h4 {
     font-size: 1.125rem;
     color: var(--text-primary);
