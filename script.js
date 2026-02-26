@@ -366,7 +366,7 @@
             const message = document.createElement('div');
             message.className = 'form-error-message';
             message.style.cssText = 'padding: 1rem; background: #ef4444; color: white; border-radius: 8px; margin-top: 1rem; text-align: center; font-weight: 600;';
-            message.textContent = 'Something went wrong. Please try calling us at (714) 555-0100.';
+            message.textContent = 'Something went wrong. Please try calling us at (949) 992-4636.';
             form.appendChild(message);
 
             setTimeout(() => {
